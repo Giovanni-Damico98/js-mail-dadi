@@ -3,6 +3,7 @@
 
 // Preparazione
 const max = 6;
+const resultElement = document.getElementById("result");
 
 // Raccolta dati
 const firstPlayerNumb = Math.floor(Math.random() * max) + 1;
@@ -21,3 +22,10 @@ if (firstPlayerNumb > secondPlayerNumb) {
 }
 
 console.log(message);
+
+// Output del risultato
+resultElement.innerHTML = `
+<p>Il primo giocatore ha fatto: ${firstPlayerNumb}</p>
+<p>Il secondo giocatore ha fatto: ${secondPlayerNumb}</p>
+<p>${message}<p>
+`;
